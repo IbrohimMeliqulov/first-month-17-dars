@@ -1,1 +1,0 @@
-# uyga_vazifa_

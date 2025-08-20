@@ -1,9 +1,6 @@
-function getLastItem(numbers){
-    alert(numbers[numbers.length-1])
- 
+let n=10
+for(let i=1 ;i<n;i++){
+    for(let j=0;j<n;j++){
+        console.log(i*j)
+    }
 }
-
-
-
-let arr=[4,8,9,3,4,78,6,5,6]
-getLastItem(arr)
