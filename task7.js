@@ -1,45 +1,25 @@
-// let kupaytma=numbers=>{
-//     let sum=1
-//     while(numbers){
-//         let raqam=numbers%10
-//         sum=sum*raqam
-//         numbers=parseInt(numbers/10)
-//     }
-//     return sum
-// }
-// console.log(kupaytma(234))
+function formatPhoneNumber(arr){
+    if(arr<10){
+        return "10 talik qiymatli arraymas"
+    }else{
+        let first=arr.slice(0,3)
+        let  joined=first.join('')
+        let second=arr.splice(3,7)
+        let result=''
+        let count=0
+        for(let i=0;i<second.length-4;i++){
+                result+=second[i]
+            count+=1
+        }
+        result+='-'
+        let third=second.slice(3,8)
+        for(let i=0;i<third.length;i++){
+            result+=third[i]
+        }
+        return `${(joined)} ${result}`
+    }
+}
 
 
-
-
-// let PerfectNumber=n=>{
-//     let sum=0
-//     for(let i=1;i<n;i++){
-//         if(n%i===0){
-//             sum+=i
-//         }
-//     }
-//     if(n===sum){
-//         return true
-//     }else{
-//         return false
-//     }
-// }
-// let n=28
-// console.log(PerfectNumber(n))
-
-// let suz=str=>{
-//     const n=str.split(' ')
-//     let word1=''
-//     for (let i=0;i<n.length;i++){
-//         const word=n[i]
-//         if(word.length>word1.length){
-//             word1=word
-//         }
-//     }
-//     return word1
-    
-// }
-
-// str="Men JavaScriptni o'rganyapman"
-// console.log(suz(str))
+let arr=[1,2,3,4,5,6,7,8,9,0]
+console.log(formatPhoneNumber(arr))

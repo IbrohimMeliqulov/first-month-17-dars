@@ -1,6 +1,7 @@
-let n=10
-for(let i=1 ;i<n;i++){
-    for(let j=0;j<n;j++){
-        console.log(i*j)
-    }
+function findPrimeNumber(arr){
+    const result=arr.filter((number)=>number%2===1)
+    return result[0]
 }
+
+let arr=[4, 12, 42, 9,12, 3]
+console.log(findPrimeNumber(arr))
