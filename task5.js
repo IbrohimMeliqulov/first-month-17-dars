@@ -1,19 +1,14 @@
-function books(obj){
-    
+function numInStr(arr){
+    let result=[]
+    for(let x of arr){
+        const pattern=/[0-9]/g;
+        if(x.match(pattern)){
+            console.log(x)
+            result.push(x)        
+        }
+    }
+    return result
 }
 
 
-
-
-
-
-
-
-
-
-obj={
-	title: 'The Hobbit',
-	author: 'J.R.R. Tolkien',
-	read: false
-}
-books(obj)
+console.log(numInStr(["1a", "a", "2b", "b"]))
