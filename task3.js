@@ -1,20 +1,30 @@
-function countAll(str){
-    let obj={}
-    let words=str.trim()
-    let HARFLAR=0
-    let RAQAMLAR=0
-    for(let x of words){
-        if(x>=0 && x<=9){
-            // console.log(x)
-            RAQAMLAR+=1
+class University{
+    static departments=[]
+    constructor(name){
+        this.name=name
+        University.departments.push(this.name)
+    }
+    remove_departments(){
+        if(University.departments.includes(this.name)){
+            let index=University.departments.indexOf(this.name)
+            University.departments.splice(index,1)
         }else{
-            HARFLAR+=1
+            return "Department not found"
         }
     }
-    obj['HARFLAR']=HARFLAR
-    obj['RAQAMLAR']=RAQAMLAR
-    return obj
-
+    get all(){
+        return University.departments
+    }
 }
 
-console.log(countAll("HELLO WORLD1"))
+
+
+
+const b1=new University("Management")
+const b2=new University("Accounting")
+const b3=new University("Finance")
+const b4=new University("Quant Physics")
+const b5=new University("Mathematics")
+b1.remove_departments()
+b3.remove_departments()
+console.log(University.departments)

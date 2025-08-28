@@ -1,37 +1,19 @@
-let obj={
-    1:"Doing a homework",
-    2:"Running every morning",
-    3:"Learning some preferable DSA",
-    4:"Going to the center",
-    5:"Going to university",
-    6:"Improving soft skills"
-}
-
-
-function addTask(task){
-    let keys=Object.keys(obj)
-    let number=Number(keys.length+1)
-    obj[number]=task
-}
-
-function removeTask(id){
-    if(obj.hasOwnProperty(id)){
-        delete obj[id]
-    }else{
-        return "Task not found"
+class Product{
+    static count_prodcut=0
+    static total_price=0
+    constructor(id,name,price){
+        this.id=id
+        this.name=name
+        this.price=price
+        Product.count_prodcut+=1
+        Product.total_price+=this.price
+    }
+    static totalPrice(){
+        return Product.total_price
     }
 }
 
 
-function printTasks(){
-    return obj
-}
-
-
-
-
-
-addTask("Jumping on the street")
-// console.log(obj)
-removeTask(5)
-console.log(printTasks())
+const product=new Product(1,"kartoshka",14500)
+const product1=new Product(2,"olma",2500)
+console.log(Product.totalPrice())

@@ -1,31 +1,20 @@
-function checkout_tax(checkout){
-    let count=0
-    let tax=0
-    for(let x of checkout){
-        let q=x.qty
-        let p=x.prc
-        let total=p*q
-        count+=total
-        total=0
-        if(x.taxable===true){
-            let natija=x.prc
-            tax=(natija/100)*6
-        }
+function calculateWorkingHours(starting_point,ending_point){
+    let first=starting_point.split(':')
+    // console.log(first)
+    let second=ending_point.split(':')
+    // console.log(second[0])
+    if(Number(second[0])>Number(first[0])){
+        let natija=Number(second[0])-Number(first[0])
+        let natija1=Number(second[1])-Number(first[1])
+        return `Ish vaqti:${natija} soat ${natija1} daqiqa`
+    }else{
+        return "Xato: tugash vaqti boshlanish vaqtidan oldin bo'lishi mumkin emas"
     }
-    console.log(count+tax)
+
 }
 
 
 
-
-
-
-
-
-
-let checkout=([
-  { desc: "kartoshka chiplari", prc: 2, qty: 2, taxable: false },
-  { desc: "gazlangan suv", prc: 3, qty: 2, taxable: false },
-  { desc: "qog'oz idishlar", prc: 5, qty: 1, taxable: true }
-])
-console.log(checkout_tax(checkout))
+let starting="10:00"
+let ending="17:30"
+console.log(calculateWorkingHours(starting,ending))
