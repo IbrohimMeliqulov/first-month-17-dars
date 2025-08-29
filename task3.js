@@ -2,11 +2,14 @@ class University{
     static departments=[]
     constructor(name){
         this.name=name
-        University.departments.push(this.name)
     }
-    remove_departments(){
-        if(University.departments.includes(this.name)){
-            let index=University.departments.indexOf(this.name)
+    addDepartment(name){
+        University.departments.push(name)
+    }
+
+    remove_departments(name){
+        if(University.departments.includes(name)){
+            let index=University.departments.indexOf(name)
             University.departments.splice(index,1)
         }else{
             return "Department not found"
@@ -21,10 +24,12 @@ class University{
 
 
 const b1=new University("Management")
-const b2=new University("Accounting")
-const b3=new University("Finance")
-const b4=new University("Quant Physics")
-const b5=new University("Mathematics")
-b1.remove_departments()
-b3.remove_departments()
+
+b1.addDepartment("Management")
+b1.addDepartment("Finance")
+b1.addDepartment("Mathematics")
+b1.addDepartment("Quant Physics")
+
+b1.remove_departments("Accounting")
+
 console.log(University.departments)
