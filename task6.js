@@ -1,21 +1,20 @@
-function ishkuni(d){
-    let data=new Date()
-    let kunlar=0
-    while(kunlar<d){
-        data.setDate(data.getDate()+1)
-        let kun=data.getDay()
-        // console.log(kun)
-        if(kun!==0 && kun !==6){
-            kunlar++
-        }
+function squareNumber(n){
+    let result=''
+    let arr=[]
+    while(n){
+        let number=n%10
+        // console.log(number)
+        arr.push(number**2)
+        n=parseInt(n/10)
     }
-    let year=data.getFullYear()
-    let month=data.getMonth()+1
-    let date=data.getDate()
-    return `${year} yil ${month} oy ${date} kun`
+    // console.log(arr)
+    for(let i=arr.length-1;i>=0;i--){
+        result+=String(arr[i])
+    }
+    return Number(result)
 }
 
 
 
-let d=60
-console.log(ishkuni(d))
+n=3221
+console.log(squareNumber(n))

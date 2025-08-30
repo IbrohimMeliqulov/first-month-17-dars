@@ -1,35 +1,64 @@
-class University{
-    static departments=[]
-    constructor(name){
-        this.name=name
-    }
-    addDepartment(name){
-        University.departments.push(name)
-    }
+class Magic{
+    constructor(){
 
-    remove_departments(name){
-        if(University.departments.includes(name)){
-            let index=University.departments.indexOf(name)
-            University.departments.splice(index,1)
-        }else{
-            return "Department not found"
-        }
     }
-    get all(){
-        return University.departments
+    replace(str){
+        let  result=''
+        for(let x of str){
+            // console.log(x)
+            if(x.toLowerCase()=='a'){
+                x=x.replaceAll('a','b')
+                result+=x
+            }
+            else{
+                result+=x
+            }
+        }
+        console.log(result)
+    }
+    length(str){
+        return str.length
+    }
+    toUpperCase(data){
+        let str=data.toLowerCase()
+        // console.log(str)
+        let result=''
+        for(let i=0;i<str.length;i++){
+            let number=str.charCodeAt(i)
+            let m=String.fromCharCode(number-32)
+            // console.log(m)
+            result+=m
+        }
+        console.log(result)
+    }
+    repeat(data,n){
+        let result=''
+        for(let i of data){
+            result+=i.repeat(n)
+        }
+        console.log(result)
+    }
+    count(data){
+        let obj={}
+        for(let i of data){
+            if(i in obj){
+                obj[i]+=1
+            }else{
+                obj[i]=1
+            }
+        }
+        console.log(obj)
     }
 }
 
 
+m=new Magic()
+m.replace("Salom")
 
+m.length("hello world")
 
-const b1=new University("Management")
+m.toUpperCase("heLLo")
 
-b1.addDepartment("Management")
-b1.addDepartment("Finance")
-b1.addDepartment("Mathematics")
-b1.addDepartment("Quant Physics")
+m.repeat("Hello",2)
 
-b1.remove_departments("Accounting")
-
-console.log(University.departments)
+m.count("hello world")

@@ -1,16 +1,18 @@
-class Point{
-    constructor(x,y){
-        this.x=x
-        this.y=y
+function pascaltriangle(lineNumber){
+    let triangle=[]
+    for(let i=0;i<lineNumber;i++){
+        let arr=[1]
+        for(let j=1;j<i;j++){
+            arr[j]=triangle[i-1][j-1]+triangle[i-1][j]
+        }
+        if(i>0){
+            arr.push(1)
+            triangle.push(arr)
+        }
     }
-    static distance(p1,p2){
-        const d=Math.sqrt((p2.x-p1.x)**2+(p2.y-p1.y)**2)
-        return d
-    }
-
+    return triangle
 }
 
 
-let p1=new Point(5,5)
-let p2=new Point(9,8)
-console.log(Point.distance(p1,p2))
+console.log(pascaltriangle(3))
+
