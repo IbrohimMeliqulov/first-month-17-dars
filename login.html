@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer_form{
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 350px;
+            background-color: white;
+            text-align: center;
+        }
+        #login_form{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        body{
+            margin: 0;
+            padding:.0 ;
+            display: flex;
+            height: 100;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer_form">
+        <div id="login_form">
+            <h3>Login</h3>
+            <a href="./registration.html">Sign up</a>
+            <form id="login" action="">
+                <label for="login_username">Username</label>
+                <br>
+                <input type="text" name="username" id="login_username">
+                <br><br>
+                <label for="login_password">Password</label>
+                <br>
+                <input type="password" name="password" id="login_password">
+                <br><br>
+                <button style= "width: 180px; background-color:coral; color: black;">Login</button>
+
+
+                <p id="matn"></p>
+            </form>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

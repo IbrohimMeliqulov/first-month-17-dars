@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer_form{
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 350px;
+            border-radius:10px ;
+            background-color: white;
+            text-align: center;
+        }
+        #sign_up{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        body{
+            margin: 0;
+            padding:0 ;
+            display: flex;
+            height: 100;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer_form">
+        <div id="sign_up">
+            <h3>Registration</h3>
+            <a href="./login.html">Login</a>
+            <form id="form" action="Registration">
+                <label for="username">Username</label>
+                <br>
+                <input type="text" name="username" id="username" required>
+                <br><br>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" name="password" id="password" required>
+                <br><br>
+                <label for="confirmation">Confirm Password</label>
+                <br>
+                <input type="password" name="confirmation" id="confirmation" required>
+                <br><br>
+                <button type="submit" id="signup" style="width: 185px; background-color:coral; color: black;">Sign Up</button>
+
+                <p id="matn"></p>
+                <script src="./main.js"></script>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
