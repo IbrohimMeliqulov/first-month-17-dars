@@ -104,11 +104,11 @@ if(form){
         return  
     } 
 
-    const uxshash=users.find(x=>x.email===email)
+    // const uxshash=users.find(x=>x.email===email)
 
-    if(uxshash){
-        alert("Bu email bilan allaqachon ro'yxatdan o'tilgan ")
-        return;
+    // if(uxshash){
+    //     alert("Bu email bilan allaqachon ro'yxatdan o'tilgan ")
+    //     return;
     }
     if(password!==confirmation){
         alert("Password mos emas")
