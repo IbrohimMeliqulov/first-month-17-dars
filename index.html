@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signupForm" action="" method="get">
+            <div class="success-message" id="successMessage"></div>
+            <div class="form-card">
+                <label for="firstName">Ism</label>
+                <input type="text" name="firstName" id="firstName" required>
+                <div class="error-message" id="firstNameError"></div>
+            </div >
+            <div class="form-card">
+                <label for="lastName">Familiya</label>
+                <input type="text" name="lastName" id="lastName" required>
+                <div class="error-message" id="lastNameError"></div>
+            </div>
+            <div class="form-card">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-card">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <div class="error-message" id="passwordError"></div>
+            </div>
+            <div class="form-card">
+                <label for="confirmation">Confirm Password</label>
+                <input type="password" name="confirmation" id="confirmation" required>
+                <div class="error-message" id="confirmationError"></div>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
